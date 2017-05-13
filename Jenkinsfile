@@ -1,9 +1,9 @@
 pipeline {
-    agent { docker 'maven:3.3.3' }
+    agent { docker '1science/sbt' }
     stages {
         stage('build') {
             steps {
-                sh 'mvn --version'
+                sh 'sbt version'
             }
         }
     }
